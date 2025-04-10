@@ -1,5 +1,5 @@
 name: Sync2Gitee
-on: [push, delete, create]
+on:
   schedule:
     # 每天北京时间9点运行
     - cron:  '0 1 * * *'
