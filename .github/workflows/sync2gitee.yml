@@ -1,17 +1,16 @@
-name: Sync2Gitee
-on:
-  schedule:
-    # 每天北京时间9点运行
-    - cron:  '0 1 * * *'
+name: Mirror to Bitbucket Repo
+on: [ push, delete, create ]
+# Ensures that only one mirror task will run at a time.
+concurrency:
+  group: git-mirror
 
 jobs:
-  build:
+  git-mirror:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync To Gitee
-        uses: wearerequired/git-mirror-action@master
-        env: 
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
           source-repo: git@github.com:MetaCubeX/meta-rules-dat.git
           destination-repo: git@gitee.com:LoogCP/ruleset.git
