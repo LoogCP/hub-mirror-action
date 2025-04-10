@@ -1,5 +1,5 @@
 on:
-  push:
+  #push:
   pull_request_target:
     branches: [master]
 name: Tests / test-user-mirror (cached)

@@ -1,6 +1,6 @@
 on:
-  push:
-  pull_request_target:
+#  push:
+#  pull_request_target:
     branches: [master]
 name: Tests / test-org-mirror
 jobs:

@@ -1,7 +1,7 @@
 name: Python Flake8 Check
 
 on:
-  pull_request:
+  #pull_request:
     paths:
     - 'hub-mirror/**'
     # Runs at every pull requests submitted in master branch
