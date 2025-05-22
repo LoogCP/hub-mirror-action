@@ -1,8 +1,8 @@
-on:
-#  push:
-#  pull_request_target:
-    branches: [master]
-name: Tests / test-org-mirror
+# on:
+# #  push:
+# #  pull_request_target:
+#     branches: [master]
+# name: Tests / test-org-mirror
 jobs:
   run:
     name: Run

@@ -1,11 +1,11 @@
 name: Python Flake8 Check
 
-on:
+#on:
   #pull_request:
-    paths:
-    - 'hub-mirror/**'
+ #   paths:
+  #  - 'hub-mirror/**'
     # Runs at every pull requests submitted in master branch
-    branches: [ master ]
+   # branches: [ master ]
 
 jobs:
   build:
